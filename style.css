@@ -1,0 +1,673 @@
+/*
+Theme Name: Carpentry
+Theme URI: http://underscores.me/
+Author: Imran Kaderbhai
+Author URI: http://SeyKad
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: carpentry
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Carpentry is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## Carpentry Theme Styles
+--------------------------------------------------------------*/
+/* ==== GENERAL ==== */
+body {
+	font-family: 'Raleway', sans-serif;
+	color:#594F39;
+	font-size:15px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight:bold;
+}
+
+
+.horizontal {
+	border: solid 15px #ffb225;
+	margin:0;
+}
+
+.horizontal2 {
+	border: solid 6px #594F39;
+	margin:0;
+}
+
+.horizontal3 {
+	border: solid 1px #ffb225;
+	width:200px;
+	position:relative;
+	right:40px;
+	margin-top:5px;
+}
+
+.horizontal4 {
+	border: solid 0.5px #ffb225;
+	margin-top:5px;
+}
+
+.horizontal5 {
+	border: solid 2px #ffb225;
+	margin:0px;
+}
+
+.navbar-default {
+	background-color:transparent !important; 
+	border-color: transparent!important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  font-size:1.3em;
+  font-weight: bold;
+}
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+.btn-info {
+	background-color:#594F39;
+	border:#594F39;
+}
+
+
+.btn-info:hover {
+	background-color:#594F39;
+	border:#594F39;
+}
+
+.btn-info a {
+    color:white;
+    text-decoration: none;
+}
+
+#maps-height {
+	padding-top:0;
+	margin-top:30px;
+	height:500px;	
+	width:100%;
+}
+
+#map {
+	height: 100%;
+	width:100%;
+}
+
+
+/* ==== GLOBAL ==== */
+.badge.social {
+	background-color:#594F39;	
+	font-size:30px;
+	height:65px;
+	width:65px;
+	text-align: center;
+	line-height:66px;
+	margin: 0 5px 20px 0;
+	padding:0;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius: 50px;
+	color:white;
+}
+
+.badge.social.facebook:hover {
+	transition: background-color 0.7s ease;
+	background-color:#3b5998;	
+}
+
+#contact-no {
+	font-size:1.4em;
+	font-weight: bold;
+}
+
+#contact-no a {
+	text-decoration:none;
+}
+/* ==== HEADER ==== */
+#logo-header-con {
+	background:
+}
+
+.logo-image {
+	height: 130px;	
+	
+}
+
+.logo-header {
+	padding:10px 0 10px 0;
+	text-align:center;
+	display: flex;
+    align-items: center;
+}
+
+
+.carousel-image {
+	background:contain;
+}
+
+/* ==== INTRO ==== */
+#intro_text {
+	margin-top:50px;
+}
+
+#intro-pic {
+	background:white url("/wp-content/themes/carpentry/assets/img/Mat_intro.svg") 10% -10px  no-repeat;
+	height:600px;
+}
+.group-option {
+	padding:10px 0 10px 0;
+	display:table;
+
+}
+
+.options {
+	font-size:65px;
+	height:100px;
+	width:100px;
+	background-color:#594F39;
+	border-radius:50%;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;	
+	color:white;
+}
+
+.option-text {
+	text-align:left;
+}
+
+/* ==== SERVICES==== */
+#services {
+	padding:50px 0 50px 0;
+}	
+
+#services_title {
+	padding:0px 0 50ps 0;
+}
+
+.services {
+	padding:50px;
+}
+
+
+.options2 {
+	font-size:65px;
+	height:100px;
+	width:100px;
+	background-color:#594F39;
+	border-radius:50%;
+	display: table-cell;
+	text-align: center;
+
+	color:white;
+	line-height:90px;
+}
+
+.icon-svg {
+	height:55px;
+}
+
+/* ==== GO-TO-ACTION ==== */
+#goto_action {
+	background-color: #FFB200;
+
+}
+
+/* ==== TESTIMONIAL ==== */
+#testimonials {
+padding:50px 0 50px 0;
+margin:20px 0 20px 0;
+}
+
+.testimon {
+	margin:10px;
+	padding:20px;
+	border:1px solid grey;
+	border-radius:25px;
+}
+
+.triangle-right {
+	position:relative;
+	padding:15px;
+	margin-right:10px;
+	margin-bottom:30px;
+	color:#fff;
+	background:#075698; /* default background for browsers without gradient support */
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#594F39), to(#594F39));
+	background:-moz-linear-gradient(#594F39, #594F39);
+	background:-o-linear-gradient(#594F39, #594F39);
+	background:linear-gradient(#594F39, #594F39);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+.triangle-right:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    border-width: 20px 0 0 20px;
+    border-style: solid;
+    border-color: #594F39 transparent;
+    display: block;
+    width: 0; 	
+} 
+
+.test-state p {
+}
+
+/* ==== GALLERY ==== */
+#gallery {
+	
+}
+
+.gallery_row {
+	
+}
+
+.gallery_col {
+	text-align:center:;
+}
+
+/* ==== CONTACT ==== */
+#contact {
+	padding:50px 0 50px 0;
+}	
+	
+	/* ==== FOOTER ==== */
+footer{
+	background:linear-gradient(to right, rgba(255,178,0,1), rgba(255,178,0,1));
+	margin: 30px;
+}
+
+.logo-footer {
+	padding:50px 0 100px 0;
+	text-align:center;
+	display: flex;
+    align-items: center;
+}
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width : 991px) {
+	#intro_text  {
+		background: rgba(255,255,255,0.7);
+		padding:10px 0 10px 0;
+		border-radius:5px;
+}
+		
+}
+
+@media screen and ( max-width : 768px ) {	
+
+}
+
+@media screen and ( max-width : 568px ) {
+	
+	
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
