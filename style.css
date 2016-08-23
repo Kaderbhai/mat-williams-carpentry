@@ -646,17 +646,33 @@ footer{
 	#intro_text  {
 		background: rgba(255,255,255,0.7);
 		padding:10px 0 10px 0;
-		border-radius:5px;
-}
+		border-radius:5	
+
+	 }
 		
 }
 
 @media screen and ( max-width : 768px ) {	
+	#intro-pic {
+		background:white url("/wp-content/them	es/carpentry/assets/img/Mat_intro.svg") 10% -10px  no-repeat;
+		height:800px;
+    }
 
+	.option-text {
+		text-align:center;
+	}
+
+	
 }
 
 @media screen and ( max-width : 568px ) {
-	
+	#intro_text {
+		margin-top:30px;
+	}
+	#intro-pic {
+		background:white url("/wp-content/them	es/carpentry/assets/img/Mat_intro.svg") 10% -10px  no-repeat;
+		height:900px;
+    }
 	
 }
 
