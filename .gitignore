@@ -1,5 +1,7 @@
+#Ignore everything
 *
-*/
+#Ignore Sub directories
+!*/
 !README.md
 !.gitignore
 !comments.php
@@ -20,4 +22,7 @@
 !sidebar.php
 !single.php
 !style.css
-!template-parts/
+!template-parts/content-goto.php
+!template-parts/content-intro.php
+!template-parts/content-testimonials.php
+languages/
