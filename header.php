@@ -55,7 +55,7 @@
 			<div class="row logo-header">
 			
 				<div class="col-sm-4">	
-				<a href=""><img class="logo-image" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/base_MW_logo_transparent.svg" alt="Mat Williams Carpentry" align="middle"></a>
+				<a href="#"><img class="img-responsive logo-image" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/base_MW_logo_transparent.svg" alt="Mat Williams Carpentry" align="middle"></a>
 				</div> <!-- col logo -->
 				
 				<div class="col-sm-4" id="contact-no">	
@@ -76,10 +76,20 @@
 	
 	<!-- HEADER-CAROSEL 
 	============================================= -->
-	<div class="container-fluid">
-		<div class="row">
-			<img class="carousel-image img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/background3.jpg" alt="background image"/> <!-- background image -->
-		</div> <!-- row -->
+	<div class="container-fluid" id="header-img">
+		<div class="container">
+				<div class="row">
+							
+					<div class="col-sm-4 col-sm-offset-7 textBackground" align="center">
+					
+						<h1><?php echo bloginfo('title'); ?></h1>
+						<hr class="horizontal5"> 
+						<h3><?php bloginfo('description'); ?></h3> 	
+						
+					</div> 
+
+				</div> <!-- row -->
+			</div> <!-- container -->
 	</div> <!-- container-fluid -->
 	
 				<!-- NAVBAR 

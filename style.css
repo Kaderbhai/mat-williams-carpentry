@@ -450,10 +450,10 @@ h1, h2, h3, h4, h5 {
 .badge.social {
 	background-color:#594F39;	
 	font-size:30px;
-	height:65px;
-	width:65px;
+	height:55px;
+	width:55px;
 	text-align: center;
-	line-height:66px;
+	line-height:58px;
 	margin: 0 5px 20px 0;
 	padding:0;
 	-webkit-border-radius:50px;
@@ -476,13 +476,8 @@ h1, h2, h3, h4, h5 {
 	text-decoration:none;
 }
 /* ==== HEADER ==== */
-#logo-header-con {
-	background:
-}
-
 .logo-image {
 	height: 130px;	
-	
 }
 
 .logo-header {
@@ -490,11 +485,28 @@ h1, h2, h3, h4, h5 {
 	text-align:center;
 	display: flex;
     align-items: center;
+
 }
 
+#header-img {
+	background: url("/wp-content/themes/carpentry/assets/img/background3.jpg") no-repeat;
+	background-size:cover;
+	background-position: center;
+}
 
-.carousel-image {
-	background:contain;
+#header-img .container .row .col-sm-4 {
+	height: 600px;
+	background: rgba(255,255,255,0.8);
+	padding:200px 10px 10px 10px;
+	border-radius:5	
+}
+
+#header-img .container .row .col-sm-4  h1{
+	font-size:3.5em;
+}
+
+#header-img .container .row .col-sm-4  h3{
+	font-size:2.0em;
 }
 
 /* ==== INTRO ==== */
@@ -643,16 +655,22 @@ footer{
 /* ==== MEDIA QUERIES ==== */
 
 @media screen and (max-width : 991px) {
+	.logo-image {
+		height: 130px;	
+    }
+	
+	
 	#intro_text  {
 		background: rgba(255,255,255,0.7);
 		padding:10px 0 10px 0;
 		border-radius:5	
 
-	 }
+	}
 		
 }
 
 @media screen and ( max-width : 768px ) {	
+	
 	#intro-pic {
 		background:white url("/wp-content/them	es/carpentry/assets/img/Mat_intro.svg") 10% -10px  no-repeat;
 		height:800px;
@@ -673,9 +691,15 @@ footer{
 		background:white url("/wp-content/them	es/carpentry/assets/img/Mat_intro.svg") 10% -10px  no-repeat;
 		height:900px;
     }
-	
+
 }
 
+@media screen and ( max-width : 450px ) {
+	.logo-image {
+		display:none;
+	}
+}	
+	
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

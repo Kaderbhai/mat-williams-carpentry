@@ -26,7 +26,7 @@
 				</div> <!-- col contact number -->
 				
 				<div class="col-sm-4">
-					<a href=""><img class="logo-image" src="<?php bloginfo('stylesheet_directory');?>/assets/img/base_MW_logo_transparent.svg" alt="Mat Williams Carpentry" align="middle"></a>
+					<a href=""><img class="img-responsive logo-image" src="<?php bloginfo('stylesheet_directory');?>/assets/img/base_MW_logo_transparent.svg" alt="Mat Williams Carpentry" align="middle"></a>
 				</div> <!-- col -->
 				
 				<div class="col-sm-4">
