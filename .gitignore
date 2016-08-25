@@ -26,4 +26,5 @@
 !template-parts/content-goto.php
 !template-parts/content-intro.php
 !template-parts/content-testimonials.php
+!template-parts/content-services.php
 languages/
