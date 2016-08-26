@@ -1,5 +1,7 @@
 <?php
 /*Template Name: Contact*/
+$contact_title         = get_field('contact_title');
+$contact_lead_text     = get_field('contact_lead_text');
 get_header(); ?>
 
 <!-- CONTACT
@@ -10,34 +12,16 @@ get_header(); ?>
 			<div id="content" class="col-sm-12">
 			
 				 <section class="main-content" align="center">
-					<h2>Get in Contact!</h2>
+					<h2><?php echo $contact_title; ?></h2>
 					<hr class="horizontal4">
-					<p class="lead">Have any questions about the course? Fell free to get in touch with me! I&rsquo;ll do my best to get back to you asap!.</p>
+					<p class="lead"><?php echo $contact_lead_text; ?></p>
 					
 					<form role="form" class="clearfix">
 						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group"></div>
-									<label for="contact-name" class="sr-only">Name</label>
-									<input type="text" class="form-control input-lg"id="contact-name" placeholder="Your name.."></input>
-								</div><!-- form-group -->
-							
-							<div class="col-sm-6">
-								<div class="form-group"></div>
-								<label for="contact-email" class="sr-only">Email</label>
-								<input type="text" class="form-control input-lg"id="contact-email" placeholder="Your email.."></input>
-							</div><!-- form-group -->
-							
-							<div class="col-sm-12">
-								<div class="form-group"></div>
-								<label for="contact-words" class="sr-only">Message</label>
-								<textarea type="text" class="form-control input-lg" id="contact-words" placeholder="Your message.." rows="3"></textarea>
-							</div><!-- form-group -->
-						
-						</div><!-- row -->			
-						<br/>
-						<input type="submit" class="btn btn-info btn-lg pull-right" value="Get in touch &raquo;"></input>
-						
+							<?php while (have_posts() ) : the_post(); ?>	
+								<?php the_content(); ?>
+							<?php endwhile; ?>
+						</div><!-- row -->				
 					</form>
 				 
 				 </section><!-- main-content -->
@@ -66,6 +50,4 @@ get_header(); ?>
 
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6ow432nOhJDc6h9NT8ea0ggqUI7JNYRI&callback=initMap"></script>	
-<?php
-
-get_footer();
+<?php get_footer(); ?>

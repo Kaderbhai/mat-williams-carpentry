@@ -624,11 +624,12 @@ margin:20px 0 20px 0;
 
 /* ==== GALLERY ==== */
 #gallery {
-	
+	padding:40px 0 20px 0;
 }
 
 .gallery_row {
-	
+	height:100%;
+	width:100%;
 }
 
 .gallery_col {
@@ -639,6 +640,7 @@ margin:20px 0 20px 0;
 #contact {
 	padding:50px 0 50px 0;
 }	
+
 	
 	/* ==== FOOTER ==== */
 footer{
@@ -711,3 +713,5 @@ footer{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { ... }
+
+/*Plugin Envira */
